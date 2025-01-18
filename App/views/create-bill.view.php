@@ -25,10 +25,10 @@
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
     <div class="wrapper">
         <div class="main">
-            <form method="post">
+            <form method="post" action="http://localhost/bill-maker/submit-bill">
                 <main class="content">
                     <div class="container-fluid p-0">
-                        <h1 class="h3 mb-3">Basic Inputs</h1>
+                        <h1 class="h3 mb-3">Create Guest Bill</h1>
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="card">
@@ -36,7 +36,7 @@
                                         <h5 class="card-title mb-0">Guest Name</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" class="form-control" placeholder="Enter Guest Name">
+                                        <input type="text" class="form-control" name="guest_name" placeholder="Enter Guest Name">
                                     </div>
                                 </div>
                                 <div class="card">
@@ -45,7 +45,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="mb-3">
-                                            <select class="form-control choices-single">
+                                            <select class="form-control choices-single" name="room_num">
                                                 <option value="101">101</option>
                                                 <option value="102">102</option>
                                                 <option value="103">103</option>
@@ -104,7 +104,7 @@
                                     </div>
                                     <div class="card-body">
                                         <div class="mb-3">
-                                            <select class="form-control choices-single">
+                                            <select class="form-control choices-single" name="org_name">
                                                 <option value="CHAI International">CHAI International</option>
                                             </select>
                                         </div>
@@ -121,7 +121,7 @@
                                         <h5 class="card-title mb-0">Guest Phone Number</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" class="form-control" placeholder="Enter Guest Phone Number">
+                                        <input type="text" class="form-control" placeholder="Enter Guest Phone Number" name="guest_num">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -133,11 +133,16 @@
                                             <div class="row">
                                                 <div class="col-12 col-xl-6">
                                                     <div class="mb-3">
-                                                        <input type="text" class="form-control flatpickr-range stay-period" placeholder="Select date.." />
+                                                        <input type="text" class="form-control flatpickr-range stay-period" placeholder="Select date..." />
                                                     </div>
-                                                    <input class="arrival_date" />
-                                                    <input class="departure_date" />
-                                                    <input class="num_of_night" />
+                                                    <div class="card-header">
+                                                        <h5 class="card-title">Enter amount per night</h5>
+                                                    </div>
+                                                    <input class="form-control" name="amt_per_night" />
+
+                                                    <input style="display: none;" class="arrival_date" name="arrival_date" />
+                                                    <input style="display: none;" class="departure_date" name="departure_dates" />
+                                                    <input style="display: none;" class="num_of_night" name="num_of_night" />
                                                 </div>
                                             </div>
                                         </div>
