@@ -30,10 +30,8 @@ class HomeController
     }
 
     public function submit_bill(){
-        var_dump($_POST);
 
         $guestName = $_POST['guest_name'];
-        $roomNumber = $_POST['room_num'];
         $roomNumber = $_POST['room_num'];
         $orgName = $_POST['org_name'];
         $guestPhoneNum = $_POST['guest_num'];
@@ -41,8 +39,25 @@ class HomeController
         $arrivalDate = $_POST['arrival_date'];
         $departureDate = $_POST['departure_date'];
         $numOfNights = $_POST['num_of_nights'];
+
+        $room_cat_params = [
+            'room_num' => $roomNumber
+        ];
         
-        
-        // $
+        $room_category = $this->db->query("SELECT * FROM room_details WHERE room_num = :room_num", $room_cat_params)->fetch()->room_category;
+
+        $params = [
+            'guest_name' => $guestName,
+            'guest_num' => $guestPhoneNum,
+            'org_name' => $orgName,
+            'num_of_nights' => $numOfNights,
+            'amt_per_night' => $amtPerNight,
+            'arrival_date' => $arrivalDate,
+            'departure_date' => $departureDate,
+            'room_num' => $roomNumber,
+            'room_category' => $room_category,
+        ];
+
+        $this->db->query("INSERT into bookings (guest_name, guest_num, organization, num_of_nights, amt_per_night, date_of_arrival, date_of_departure, room_number, room_category) VALUES (:guest_name, :guest_num, :org_name, :num_of_nights, :amt_per_night, :arrival_date, :departure_date, :room_num, :room_category)", $params);
     }
 }
