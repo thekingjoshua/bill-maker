@@ -20,6 +20,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
 
     <link class="js-stylesheet" href="light.css" rel="stylesheet">
+    <style>
+        .copyright {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .copyright p {
+            color: gray;
+            /* SHOW DEVELOPER SIGNATURE */
+            /* font-size: 15px; */
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
@@ -141,8 +154,8 @@
                                                     <input class="form-control" name="amt_per_night" />
 
                                                     <input style="display: none;" class="arrival_date" name="arrival_date" />
-                                                    <input style="display: none;" class="departure_date" name="departure_dates" />
-                                                    <input style="display: none;" class="num_of_night" name="num_of_night" />
+                                                    <input style="display: none;" class="departure_date" name="departure_date" />
+                                                    <input style="display: none;" class="num_of_night" name="num_of_nights" />
                                                 </div>
                                             </div>
                                         </div>
@@ -154,6 +167,9 @@
                                     </div>
                                 </div>
                 </main>
+                <div class="copyright">
+                    <p>Powered by KingJoshua - 07047874151</p>
+                </div>
             </form>
         </div>
     </div>
