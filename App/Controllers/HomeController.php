@@ -28,4 +28,21 @@ class HomeController
     {
         loadView('create-bill');
     }
+
+    public function submit_bill(){
+        var_dump($_POST);
+
+        $guestName = $_POST['guest_name'];
+        $roomNumber = $_POST['room_num'];
+        $roomNumber = $_POST['room_num'];
+        $orgName = $_POST['org_name'];
+        $guestPhoneNum = $_POST['guest_num'];
+        $amtPerNight = $_POST['amt_per_night'];
+        $arrivalDate = $_POST['arrival_date'];
+        $departureDate = $_POST['departure_date'];
+        $numOfNights = $_POST['num_of_nights'];
+        
+        
+        // $
+    }
 }
