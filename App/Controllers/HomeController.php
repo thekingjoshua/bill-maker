@@ -28,6 +28,12 @@ class HomeController
     {
         loadView('create-bill');
     }
+    public function view_bills()
+    {
+        $guest_bills = $this->db->query("SELECT * FROM bookings")->fetchAll();
+
+        loadView('view-bills', ["guest_bills" => $guest_bills]);
+    }
 
     public function submit_bill(){
 
