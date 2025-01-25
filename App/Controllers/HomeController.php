@@ -28,6 +28,10 @@ class HomeController
     {
         loadView('create-bill');
     }
+    public function add_organization()
+    {
+        loadView('add-organization');
+    }
     public function view_guest_bill()
     {
         $baseURI = explode('/', $_SERVER['REQUEST_URI']);
