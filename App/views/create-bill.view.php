@@ -118,7 +118,9 @@
                                     <div class="card-body">
                                         <div class="mb-3">
                                             <select class="form-control choices-single" name="org_name">
-                                                <option value="CHAI International">CHAI International</option>
+                                                <?php foreach ($organizations as $organizations): ?>
+                                                    <option value="<?= $organizations->organization_name ?>"><?= $organizations->organization_name ?></option>
+                                                    <?php endforeach; ?>
                                             </select>
                                         </div>
                                         <div style="display: none;">
