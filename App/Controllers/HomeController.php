@@ -32,6 +32,18 @@ class HomeController
     {
         loadView('add-organization');
     }
+    public function process_add_organization()
+    {
+        $org_name = $_POST['org_name'];
+
+        $params = [
+            "org_name" => $org_name
+        ];
+
+        $this->db->query("INSERT into organizations (organization_name) VALUES (:org_name)", $params);
+
+        redirect("http://localhost/bill-maker/add/organization");
+    }
     public function view_guest_bill()
     {
         $baseURI = explode('/', $_SERVER['REQUEST_URI']);
