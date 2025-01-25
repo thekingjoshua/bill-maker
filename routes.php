@@ -13,3 +13,4 @@ $router->get("{$baseURI[1]}/add/organization", 'HomeController@add_organization'
 
 
 $router->post("{$baseURI[1]}/submit-bill", 'HomeController@submit_bill');
+$router->post("{$baseURI[1]}/add-organization", 'HomeController@process_add_organization');
