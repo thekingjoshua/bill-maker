@@ -15,7 +15,7 @@
 
     <link rel="canonical" href="forms-advanced-inputs-2.html" />
 
-    <title>Advanced Inputs | AdminKit Demo</title>
+    <title>Create Guest Bill</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
 
