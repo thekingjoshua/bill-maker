@@ -131,3 +131,13 @@ function generateRandomString($length = 5) {
 
     return $randomString;
 }
+function generateRandomInteger($length = 4) {
+    $characters = '012345689';
+    $randomInteger = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $randomInteger .= $characters[rand(0, strlen($characters) - 1)];
+    }
+
+    return $randomInteger;
+}
