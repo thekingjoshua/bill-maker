@@ -28,6 +28,15 @@ class HomeController
     {
         loadView('create-bill');
     }
+    public function view_guest_bill()
+    {
+        $baseURI = explode('/', $_SERVER['REQUEST_URI']);
+        $booking_id = end($baseURI); 
+
+        $guest_bill = $this->db->query("SELECT * FROM bookings WHERE id = '$booking_id'")->fetch();
+
+        loadView('guest-bill', ["guest_bill" => $guest_bill]);
+    }
     public function view_bills()
     {
         $guest_bills = $this->db->query("SELECT * FROM bookings")->fetchAll();
@@ -35,7 +44,8 @@ class HomeController
         loadView('view-bills', ["guest_bills" => $guest_bills]);
     }
 
-    public function submit_bill(){
+    public function submit_bill()
+    {
 
         $guestName = $_POST['guest_name'];
         $roomNumber = $_POST['room_num'];
@@ -49,7 +59,7 @@ class HomeController
         $room_cat_params = [
             'room_num' => $roomNumber
         ];
-        
+
         $room_category = $this->db->query("SELECT * FROM room_details WHERE room_num = :room_num", $room_cat_params)->fetch()->room_category;
 
         $params = [
