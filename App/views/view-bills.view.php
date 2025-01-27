@@ -12,7 +12,7 @@
     <title>View all Guest Bills</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
-    <link class="js-stylesheet" href="http://localhost/bill-maker/css/light.css" rel="stylesheet">
+    <link class="js-stylesheet" href="http://localhost/bill-maker/light.css" rel="stylesheet">
 
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
     <div class="wrapper">
