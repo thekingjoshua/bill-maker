@@ -34,6 +34,10 @@ class HomeController
     {
         loadView('add-organization');
     }
+    public function view_all_guest_bills()
+    {
+        loadView('view-all-guest-bills');
+    }
     public function process_add_organization()
     {
         $org_name = $_POST['org_name'];
