@@ -5,9 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		A Simple Invoice Template Responsive and clean with HTML CSS SCSS
-	</title>
+	<title>Home Page</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -33,16 +31,16 @@
 					<p>Bill No: #0001</p>
 					<p>Guest Name: John Doe</p>
 					<p>Guest Phone Number: John Doe</p>
-					<p>Arrival Date: 10/12/2024</p>
-					<p>Departure Date: 12/12/2024</p>
+					<p>Arrival Date: 2025-01-31</p>
+					<p>Departure Date: 2025-01-31</p>
 					<p>Room No: 302</p>
-					<p>Room Type: EXECUTIVE ROOM</p>
+					<p>Room Category: EXECUTIVE ROOM</p>
 				</div>
 				<div class="head client-data">
 					<p>+234 814 699 8988</p>
 					<p>www.mogadishumetrohotel.com</p>
 					<p>mogadishumetrohotelandsuites.gmail.com</p>
-					<p style="margin-top: 50px;">Date: 16/01/2025</p>
+					<p style="margin-top: 50px;">Date added: 2025-01-24 09:00:17</p>
 					<p>Bill Status: GROUP</p>
 					<p>Organization: CHAI International</p>
 				</div>
