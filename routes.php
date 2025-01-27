@@ -15,3 +15,4 @@ $router->get("{$baseURI[1]}/view/all-guest-bills", 'HomeController@view_all_gues
 
 $router->post("{$baseURI[1]}/submit-bill", 'HomeController@submit_bill');
 $router->post("{$baseURI[1]}/add-organization", 'HomeController@process_add_organization');
+$router->post("{$baseURI[1]}/print-all-guest-bills", 'HomeController@print_all_guest_bills');
