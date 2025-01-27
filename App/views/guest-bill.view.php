@@ -81,7 +81,9 @@
 						$total_debit = 0;
 						$total_balance = 0;
 
-						while ($start_date < $end_date) {
+						$loop_end_date = $end_date->modify("-1 day");
+
+						while ($start_date < $loop_end_date) {
 							$p_code = generateRandomInteger();
 							$balance = number_format($base_debit_amt, 2);
 							$debit_amt = number_format($guest_bill->amt_per_night, 2);
