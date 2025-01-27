@@ -47,7 +47,22 @@ class HomeController
         
         $guest_bills = $this->db->query("SELECT * FROM bookings WHERE organization = '$org_name' AND date_of_arrival = '$arrival_date'")->fetchAll();
 
-        loadView('print-all-guest-bills', ["guest_bills" => $guest_bills]);
+        loadView('print-all-guest-bills', ["guest_bills" => $guest_bills, "org_name" => $org_name, "arrival_date" => $arrival_date]);
+    }
+    public function table_guest_bills()
+    {
+        $baseURI = explode('/', $_SERVER['REQUEST_URI']);
+        $org_name = urldecode($baseURI[4]);
+        $arrival_date = end($baseURI);
+
+        // $clean_url = urldecode($org_name);
+
+        // var_dump($org_name);
+        // var_dump($arrival_date);
+
+        $guest_bills = $this->db->query("SELECT * FROM bookings WHERE organization = '$org_name' AND date_of_arrival = '$arrival_date'")->fetchAll();
+
+        loadView('print-all-guest-bills', ["guest_bills" => $guest_bills, "org_name" => $org_name]);
     }
     public function process_add_organization()
     {
