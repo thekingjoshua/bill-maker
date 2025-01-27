@@ -36,12 +36,18 @@ class HomeController
     }
     public function view_all_guest_bills()
     {
-        loadView('view-all-guest-bills');
+        $organizations = $this->db->query("SELECT * FROM organizations")->fetchAll();
+
+        loadView('view-all-guest-bills', ["organizations" => $organizations]);
     }
     public function print_all_guest_bills()
     {
-        var_dump($_POST);
-        // loadView('view-all-guest-bills');
+        $org_name = $_POST['org_name'];
+        $arrival_date = $_POST['arrival_date'];
+        
+        $guest_bills = $this->db->query("SELECT * FROM bookings WHERE organization = '$org_name' AND date_of_arrival = '$arrival_date'")->fetchAll();
+
+        loadView('print-all-guest-bills', ["guest_bills" => $guest_bills]);
     }
     public function process_add_organization()
     {
