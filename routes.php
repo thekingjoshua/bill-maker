@@ -10,6 +10,7 @@ $router->get("{$baseURI[1]}/create-bill", 'HomeController@create_bill');
 $router->get("{$baseURI[1]}/view-bills", 'HomeController@view_bills');
 $router->get("{$baseURI[1]}/view/guest-bill/{id}", 'HomeController@view_guest_bill');
 $router->get("{$baseURI[1]}/add/organization", 'HomeController@add_organization');
+$router->get("{$baseURI[1]}/view/all-guest-bills", 'HomeController@view_all_guest_bills');
 
 
 $router->post("{$baseURI[1]}/submit-bill", 'HomeController@submit_bill');
