@@ -49,7 +49,7 @@
                                         <h5 class="card-title mb-0">Organization Name</h5>
                                     </div>
                                     <div class="card-body">
-                                        <input type="text" class="form-control" name="guest_name" placeholder="Enter Organization Name">
+                                        <input type="text" class="form-control" name="org_name" placeholder="Enter Organization Name">
                                     </div>
                                 </div>
                                 <div class="card">
