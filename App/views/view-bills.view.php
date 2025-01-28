@@ -65,7 +65,8 @@
                                         <th>Amount Per Night</th>
                                         <th>Date of Arrival</th>
                                         <th>Date of Departure</th>
-                                        <th>Action</th>
+                                        <th>Print</th>
+                                        <th>Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -86,6 +87,7 @@
                                             <td><?= $date_of_arrival->format('d/m/Y'); ?></td>
                                             <td><?= $date_of_departure->format('d/m/Y'); ?></td>
                                             <td><a href="http://localhost/bill-maker/view/guest-bill/<?= $guest_bill->id ?>" target="_blank">Print</a></td>
+                                            <td><a href="http://localhost/bill-maker/delete/guest-bill/<?= $guest_bill->id ?>" target="_blank">Delete</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
