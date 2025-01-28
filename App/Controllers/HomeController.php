@@ -152,7 +152,7 @@ class HomeController
             ];
 
             $this->db->query("INSERT into bookings (guest_name, guest_num, organization, num_of_nights, amt_per_night, date_of_arrival, date_of_departure, room_number, room_category) VALUES (:guest_name, :guest_num, :org_name, :num_of_nights, :amt_per_night, :arrival_date, :departure_date, :room_num, :room_category)", $params);
-            redirect("http://localhost/bill-maker/view-bills");
+            redirect("http://localhost/bill-maker/create-bills");
         }
     }
 }
