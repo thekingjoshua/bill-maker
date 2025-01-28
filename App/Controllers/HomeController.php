@@ -96,6 +96,14 @@ class HomeController
 
         loadView('view-bills', ["guest_bills" => $guest_bills]);
     }
+    public function delete_guest_bill()
+    {
+        $baseURI = explode('/', $_SERVER['REQUEST_URI']);
+        $booking_id = end($baseURI);
+
+        $this->db->query("DELETE FROM bookings WHERE `bookings`.`id` = '$booking_id'")->fetchAll();
+        redirect("http://localhost/bill-maker/view-bills");
+    }
 
     public function submit_bill()
     {
