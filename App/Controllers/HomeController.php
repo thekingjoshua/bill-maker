@@ -47,7 +47,12 @@ class HomeController
         
         $guest_bills = $this->db->query("SELECT * FROM bookings WHERE organization = '$org_name' AND date_of_arrival = '$arrival_date'")->fetchAll();
 
-        loadView('print-all-guest-bills', ["guest_bills" => $guest_bills, "org_name" => $org_name, "arrival_date" => $arrival_date]);
+        if(empty($guest_bills)){
+            echo "<h1 style=\"font-family: sans-serif; text-align: center; padding-top: 50px; font-size: 5rem; color: red\">No result found!</h2>";
+        }else{
+            loadView('print-all-guest-bills', ["guest_bills" => $guest_bills, "org_name" => $org_name, "arrival_date" => $arrival_date]);
+        }
+
     }
     public function table_guest_bills()
     {
