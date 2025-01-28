@@ -15,7 +15,7 @@
 
     <link rel="canonical" href="forms-advanced-inputs-2.html" />
 
-    <title>Create Guest Bill</title>
+    <title>Search Guest Bills</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
 
@@ -41,7 +41,7 @@
             <form method="post" action="http://localhost/bill-maker/print-all-guest-bills">
                 <main class="content">
                     <div class="container-fluid p-0">
-                        <h1 class="h3 mb-3">Create Guest Bill</h1>
+                        <h1 class="h3 mb-3">Search Guest Bill</h1>
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="card">
