@@ -12,6 +12,7 @@ $router->get("{$baseURI[1]}/view/guest-bill/{id}", 'HomeController@view_guest_bi
 $router->get("{$baseURI[1]}/add/organization", 'HomeController@add_organization');
 $router->get("{$baseURI[1]}/search/guest-bills", 'HomeController@search_all_guest_bills');
 $router->get("{$baseURI[1]}/view/table-guest-bills/{org}/{date}", 'HomeController@table_guest_bills');
+$router->get("{$baseURI[1]}/delete/guest-bill/{id}", 'HomeController@delete_guest_bill');
 
 
 $router->post("{$baseURI[1]}/submit-bill", 'HomeController@submit_bill');
