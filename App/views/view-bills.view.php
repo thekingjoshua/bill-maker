@@ -13,7 +13,19 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
     <link class="js-stylesheet" href="http://localhost/bill-maker/light.css" rel="stylesheet">
+    <style>
+        .copyright {
+            margin-top: 0;
+            text-align: center;
+        }
 
+        .copyright p {
+            color: gray;
+            /* SHOW DEVELOPER SIGNATURE */
+            /* font-size: 15px; */
+            font-size: 18px;
+        }
+    </style>
 <body data-theme="default" data-layout="fluid" data-sidebar-position="left" data-sidebar-layout="default">
     <div class="wrapper">
         <div class="main">
@@ -58,8 +70,8 @@
                                 </thead>
                                 <tbody>
                                     <?php foreach ($guest_bills as $guest_bill):
-                                        $date_of_arrival = new DateTime($guest_bill->date_of_arrival);  
-                                        $date_of_departure = new DateTime($guest_bill->date_of_departure);  
+                                        $date_of_arrival = new DateTime($guest_bill->date_of_arrival);
+                                        $date_of_departure = new DateTime($guest_bill->date_of_departure);
                                     ?>
 
                                         <tr>
@@ -83,7 +95,9 @@
 
                 </div>
             </main>
-
+            <div class="copyright">
+                <p>Powered by KingJoshua - 07047874151</p>
+            </div>
         </div>
     </div>
 
