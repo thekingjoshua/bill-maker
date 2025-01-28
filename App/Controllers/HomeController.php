@@ -34,7 +34,7 @@ class HomeController
     {
         loadView('add-organization');
     }
-    public function view_all_guest_bills()
+    public function search_all_guest_bills()
     {
         $organizations = $this->db->query("SELECT * FROM organizations")->fetchAll();
 
