@@ -87,7 +87,7 @@
                                             <td><?= $date_of_arrival->format('d/m/Y'); ?></td>
                                             <td><?= $date_of_departure->format('d/m/Y'); ?></td>
                                             <td><a href="http://localhost/bill-maker/view/guest-bill/<?= $guest_bill->id ?>" target="_blank">Print</a></td>
-                                            <td><a href="http://localhost/bill-maker/delete/guest-bill/<?= $guest_bill->id ?>" target="_blank">Delete</a></td>
+                                            <td><a style="color: red;" href="http://localhost/bill-maker/delete/guest-bill/<?= $guest_bill->id ?>">Delete</a></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
