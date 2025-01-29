@@ -266,6 +266,7 @@ body {
 .cta_text{
     width: 200px;
     position: absolute;
+    overflow: hidden;
     z-index: 999999;
     padding: 10px;
     text-align: center;
@@ -274,6 +275,7 @@ body {
     top: 170px;
     font-size: 20px;
     font-weight: bolder;
+    background-repeat: no-repeat;
 }
 @media print {
     .wrapper-invoice .invoice .invoice-information p{
@@ -332,15 +334,25 @@ body {
         font-size: 30px;
     }
     .cta_text{
-        width: 250px;
-        position: fixed;
+        width: 500px;
+        height: 100px;
+        position: relative;
         z-index: 999999;
         padding: 10px;
         text-align: center;
         border: 2px solid #000000;
-        right: 600px;
-        top: 380px;
+        right: 400px;
+        top: -30px;
         font-size: 30px;
         font-weight: bolder;
+    }
+    .wrapper-invoice .invoice .invoice-head .client-data {
+        text-align: right;
+        background-color: red;
+        /* margin-left : 500px; */
+        position: absolute;
+        top: 100;
+        right: 120px;
+        width: 600px;
     }
 }
