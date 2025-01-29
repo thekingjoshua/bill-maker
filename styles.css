@@ -348,7 +348,8 @@ body {
     }
     .wrapper-invoice .invoice .invoice-head .client-data {
         text-align: right;
-        background-color: red;
+        background-color: transparent;
+        border-radius: 2px solid black;
         /* margin-left : 500px; */
         position: absolute;
         top: 100;
