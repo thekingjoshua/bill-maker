@@ -28,7 +28,7 @@
                     <br/>
                     <br/>
                     <br/>
-					<p>Name of Organization: <?= $org_name ?></p>
+					<p class="org_name">Name of Organization: <br/> Kaduna State Primary Health Care Board</p>
 					<p>Date of Arrival: 
                         <?php 
                             $date_of_arrival = new DateTime($guest_bills[0]->date_of_arrival);
